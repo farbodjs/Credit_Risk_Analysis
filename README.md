@@ -1,7 +1,7 @@
 # Credit_Risk_Analysis
 ## Overview of project
 In this project, our goal is to use machine learning techniques to analyzed our data (LoanStats_2019Q1) which contains 115676 rows of applicants and 86 columns of factors.Our goal is to perform analysis and figure out how all these factors in our loan_stats csv help predict whether a applicant is low or high risk for lending purposes. We created several machine learning models and then evaluated and train the models to calculate accuracy score and precision. In this specific project we are using imbalanced-learn and scikit-learn libraries to build models and evalute them using various resampling methods. In the first couple of models we used  oversampling method using randomoversampler library and smote algorithms and undersample the data with the clustercentroid algorithms. In the remaining models we used a combination approach of these models. We analyzed performance and efficiency of each model by creating confusion matrix and running classification report.
-## results of Resampling techniques ( please refer to credit_risk_resampling.ipynb)
+## Results of Resampling techniques ( please refer to credit_risk_resampling.ipynb)
 ### Results for Naive Random Oversampling using RandomOverSampler library 
 Our balanced accuracy test it 64%, the precision for the high_risk has a very low positivity at 1% and the recall is 71%. However, we achieved a precision of 100% for Low_risk which means our prediction of low_risk had no faults. Overall, this model is not satisfactory since it fails to predict high_risk candidates
 ![image](https://user-images.githubusercontent.com/86033316/145658196-3938c12e-c195-4e56-bcb7-6c8c46dbf422.png)
@@ -12,12 +12,12 @@ The accuracy score is 65.9%, the precision for the high_risk loans has a low pre
 ### Results for Undersampling using ClusterCentroids Library
 The accuracy score is 65.9%, the precision for the high_risk has a very low prescicion at 1% and recall is 69% for high_risk and 40% for low_risk which is again not satisfactory.
 ![image](https://user-images.githubusercontent.com/86033316/145658599-0b0a3e6e-bdba-4216-ad56-cce73dc991ae.png)
-### results for combination of (over and under)sampling using SMOTEENN Library
+### Results for combination of (over and under)sampling using SMOTEENN Library
 The accuracy score for this model is even lower than the previous ones with 54% accuracy. The precision for high_risk is 1 % and low_risk is 99%. Recall for high_risk is 72% and for low_risk is 57%.
 
 ![image](https://user-images.githubusercontent.com/86033316/145658813-ec474a6a-42c6-44ff-92c1-22a7ef76b2a4.png)
 
-## results of ensembling techniques ( please refer to credit_risk_ensemble.ipynb)
+## Results of ensembling techniques ( please refer to credit_risk_ensemble.ipynb)
 
 ### Results for ensembling using BalancedRandomForestClassifier Library
 The accuracy score is slightly improved to 75% accuracy. Precision for high_risk is still low as 3% but is improved from resampling techniques. Recall factor for high_risk is 60% and for low_risk is 89%
